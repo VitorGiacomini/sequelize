@@ -1,0 +1,26 @@
+<h1>Usuários:</h1>
+
+<a href="/usuarios/novo">Cadastrar novo</a>
+
+<table style="border: 2px black solid;">
+    <thead>
+        <tr>
+            <th style="border: 1px black solid;">ID</th>
+            <th style="border: 1px black solid;">Nickname</th>
+            <th style="border: 1px black solid;">Nome</th>
+            <th style="border: 1px black solid;">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each usuarios}}
+            <tr>
+                <td style="border: 1px black solid;">{{this.id}}</td>
+                <td style="border: 1px black solid;">{{this.nickname}}</td>
+                <td style="border: 1px black solid;">{{this.nome}}</td>
+                <td style="border: 1px black solid;">
+                    <a href="/usuarios/{{this.id}}/update">Atualizar</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
