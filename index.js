@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/usuarios", async (req, res) => {
-  const usuarios = await Usuario.findAll({raw: true});
+  const usuarios = await Usuario.findAll({ raw: true });
   res.render("usuarios", { usuarios });
 });
 
@@ -44,29 +44,41 @@ app.post("/usuarios/novo", async (req, res) => {
 
 });
 //Atualizar Usuario
-app.get("/usuarios/:id/update", async (req,res)=>{
+app.get("/usuarios/:id/update", async (req, res) => {
   const id = parseInt(req.params.id)
-  const usuario = await Usuario.findByPk(id, {raw: true})
+  const usuario = await Usuario.findByPk(id, { raw: true })
 
-  if(usuario !== null){
-    res.render("formUsuario",{usuario})
+  if (usuario !== null) {
+    res.render("formUsuario", { usuario })
 
-  }else{
+  } else {
     res.redirect("/usuarios")
   }
 })
-app.post("/usuarios/:id/update", async(req,res)=>{
+app.post("/usuarios/:id/update", async (req, res) => {
   const id = parseInt(req.params.id);
-  
+
   dadosUsuario = {
     nome: req.body.nome,
     nickname: req.body.nickname
   }
-  Usuario.update(dadosUsuario,{where: {id:id}})
+  Usuario.update(dadosUsuario, { where: { id: id } })
 
   res.redirect("/usuarios")
 })
 
+
+//deletar usuario
+app.post("/usuarios/:id/delete", (req, res) => {
+  const id = parseInt(req.params.id)
+  Usuario.destroy({ where: { id: id } })
+  res.redirect("/usuarios")
+});
+
+
+
+
+//servidor rodando
 app.listen(process.env.SERVER_PORT, () => {
   console.log("SERVER rodando!");
 })

@@ -19,6 +19,9 @@
                 <td style="border: 1px black solid;">{{this.nome}}</td>
                 <td style="border: 1px black solid;">
                     <a href="/usuarios/{{this.id}}/update">Atualizar</a>
+                    <form action="/usuarios/{{this.id}}/delete" method="post">
+                        <input type="submit" value="Excluir"/>
+                    </form>
                 </td>
             </tr>
         {{/each}}
