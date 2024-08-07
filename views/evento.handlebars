@@ -1,0 +1,16 @@
+<main>
+	<link rel='stylesheet' href='/css/index.css' />
+	<link rel='stylesheet' href='/css/pagevento.css' />
+	<h1>{{evento.nomeEvento}}</h1>
+	<p>Nome Evento: {{evento.nomeEvento}}</p>
+	<p>Data Evento: {{evento.dataEvento}}</p>
+	<p>Horario: {{evento.horaEvento}}</p>
+	<p>Local: {{evento.localEvento}}</p>
+	<p>Valor do Ingresso: R${{evento.valorIngresso}}</p>
+	<a href='/eventos/{{evento.id}}/atualizar'><button
+			type='button'
+			class='atualizar'
+		>Atualizar Evento</button></a>
+
+	<a href='/'><button type='button' class='voltar'>Voltar à Página Inicial</button></a>
+</main>

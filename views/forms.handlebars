@@ -1,0 +1,65 @@
+<main class='formulario'>
+	<link rel='stylesheet' href='/css/cadastroForm.css' />
+	<link rel='stylesheet' href='/css/index.css' />
+	{{#if isUpdate}}
+		<h1 class='att'>Atualizar Evento:</h1>
+	{{else}}
+		<h1 class='cad'>Cadastro de Evento:</h1>
+	{{/if}}
+	<form action='{{action}}' method='post'>
+		<input type='hidden' id='eventoId' name='eventoId' value='{{evento.id}}' />
+		<div>
+			<label for='nomeEvento'>Nome do Evento: </label>
+			<input
+				type='text'
+				id='nomeEvento'
+				name='nomeEvento'
+				placeholder='Nome do Evento'
+				value='{{evento.nomeEvento}}'
+			/>
+		</div>
+		<div>
+			<label for='dataEvento'>Data do Evento: </label>
+			<input
+				type='date'
+				id='dataEvento'
+				name='dataEvento'
+				value='{{evento.dataEvento}}'
+			/>
+		</div>
+		<div>
+			<label for='horaEvento'>Hora do Evento: </label>
+			<input
+				type='time'
+				id='horaEvento'
+				name='horaEvento'
+				value='{{evento.horaEvento}}'
+			/>
+		</div>
+		<div>
+			<label for='localEvento'>Local do Evento: </label>
+			<input
+				type='text'
+				id='localEvento'
+				name='localEvento'
+				value='{{evento.localEvento}}'
+			/>
+		</div>
+		<div>
+			<label for='valorIngresso'>Valor do Ingresso: </label>
+			<input
+				type='text'
+				id='valorIngresso'
+				name='valorIngresso'
+				value='{{evento.valorIngresso}}'
+			/>
+		</div>
+	 <div class="button-container">
+        {{#if isUpdate}}
+            <button type='submit' class='atualizar'>Atualizar Evento</button>
+        {{else}}
+            <button type='submit' class='cadastrar'>Cadastrar Evento</button>
+        {{/if}}
+        <a href='/'><button type='button' class='voltar'>Voltar à Página Inicial</button></a>
+    </div>
+</main>

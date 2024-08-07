@@ -1,0 +1,38 @@
+<main>
+	<link rel='stylesheet' href='css/evento.css' />
+	<h1>Eventos</h1>
+	<table border='1' class='tabelaEventos'>
+		<tr class='border'>
+			<th class='title'>Id</th>
+			<th class='title'> Nome do Evento: </th>
+			<th class='title'> Data do Evento: </th>
+			<th class='title'> Horario do Evento: </th>
+			<th class='title'> Local:</th>
+			<th class='title'> Valor do Ingresso: </th>
+			<th class='title'> Ações: </th>
+
+		</tr>
+		{{#if eventos}}
+			{{#each eventos}}
+				<tr>
+					<td>{{this.id}}</td>
+					<td>{{this.nomeEvento}}</td>
+					<td>{{this.dataEvento}}</td>
+					<td>{{this.horaEvento}}</td>
+					<td>{{this.localEvento}}</td>
+					<td>R${{this.valorIngresso}}</td>
+					<td>
+						<a href='eventos/{{this.id}}' class='linkVisualizar'>Abrir</a>
+						<form action='/eventos/excluir/{{this.id}}' method='post'>
+							<button type='submit' class='botaoExcluir'>Excluir</button>
+						</form>
+					</td>
+				</tr>
+			{{/each}}
+		{{else}}
+			<tr>
+				<td colspan='3'>Não há eventos cadastrados</td>
+			</tr>
+		{{/if}}
+	</table>
+</main>

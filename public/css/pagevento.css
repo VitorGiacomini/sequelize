@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
+* {
+	box-sizing: border-box;
+	font-family: 'Chakra Petch', sans-serif;
+	color: #fff;
+}
+main {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.548);
+	border-radius: 8px;
+	box-shadow: -9px 10px 41px 1px rgba(196, 166, 101, 0.71);
+}
+
+.cad {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+form div {
+	margin-bottom: 15px;
+}
+
+label {
+	font-weight: bold;
+}
+
+input[type='text'],
+input[type='date'],
+input[type='time'] {
+	background-color: rgba(0, 0, 0, 0.548);
+	color: rgb(207, 184, 184);
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+button[type='submit'] {
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.voltar {
+	margin-top: 5px;
+	background-color: rgb(177, 26, 26);
+	color: #fff;
+	margin-top: 15px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 360px;
+}
+
+.voltar:hover {
+	background-color: #530606;
+}
+.atualizar {
+	margin-top: 5px;
+	background-color: rgb(0, 94, 255);
+	color: #fff;
+	margin-top: 15px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 360px;
+}
+
+.atualizar:hover {
+	background-color: #002886;
+}
+.botaoCadastrar {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 20px;
+	background-color: #007bff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.iconeAdicionar {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.botaoCadastrar {
+	background-color: #555555;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.botaoCadastrar:hover {
+	background-color: #393939;
+}

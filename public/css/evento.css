@@ -1,0 +1,88 @@
+* {
+	color: white;
+}
+
+body {
+	color: white;
+}
+
+.tabelaEventos {
+	color: white;
+	border-collapse: collapse;
+	width: 100%;
+	box-shadow: -9px 10px 41px 1px rgba(196, 166, 101, 0.71);
+}
+.linkVisualizar {
+	background-color: #ec7d23;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	padding: 8px;
+}
+
+.botaoExcluir {
+	width: 100px;
+	background-color: #dc3545;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	padding: 8px;
+}
+
+.linkVisualizar:hover {
+	background-color: #a75411;
+}
+.linkVisualizar,
+.botaoExcluir {
+	width: 50px;
+	border: none;
+	padding: 2px;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	margin-top: 6px;
+}
+.botaoExcluir:hover {
+	background-color: #c82333;
+}
+
+.tabelaEventos th,
+.tabelaEventos td {
+	border: 1px solid rgb(0, 0, 0);
+	padding: 8px;
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.548);
+}
+
+.tabelaEventos th {
+	background-color: #333;
+}
+
+.tabelaEventos td a {
+	color: white;
+	text-decoration: none;
+}
+
+.tabelaEventos td a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.border th,
+.border td {
+	border-color: white;
+}
+
+.border th {
+	background-color: #333;
+}
